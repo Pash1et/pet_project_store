@@ -6,10 +6,11 @@ class Product(models.Model):
     description = models.TextField(verbose_name='Описание')
     price = models.DecimalField(max_digits=10,
                                 decimal_places=0,
-                                verbose_name='Цена')
+                                verbose_name='Цена, ₽')
     articul = models.IntegerField(verbose_name='Артикул')
-    is_active = models.BooleanField(default=False)
-    delete = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=False,
+                                    verbose_name='Показать на сайте?')
+    delete = models.BooleanField(default=False, verbose_name='Удалить?')
     created = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
