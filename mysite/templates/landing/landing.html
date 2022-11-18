@@ -11,9 +11,9 @@
         <div class="container text-center">
             <div class="row">
                 {% for product in products %}
-                    <div class="col-lg-2 card-product">
+                    <div class="col-lg-3 card-product">
                         <div class="card-product-img">
-                            <img src="{{ product.image.url }}" class="img-fluid">
+                            <img src="{{ product.images.get.image }}" class="img-fluid">
                         </div>
                         <p class="card-product-text">
                             {{ product.name }}

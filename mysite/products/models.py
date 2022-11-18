@@ -19,3 +19,17 @@ class Product(models.Model):
     class Meta:
         verbose_name = 'Товар'
         verbose_name_plural = 'Товары'
+
+
+class ProductImage(models.Model):
+    image = models.ImageField(upload_to='static/media/product_img/',
+                              verbose_name='Фотография')
+    product = models.ForeignKey(Product, on_delete=models.CASCADE,
+                                related_name='images')
+
+    def __str__(self) -> str:
+        return self.product.name
+
+    class Meta:
+        verbose_name = 'Фотография'
+        verbose_name_plural = 'Фотографии'
