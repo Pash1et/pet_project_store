@@ -1,0 +1,14 @@
+.card-product{
+    height: 570px;
+    margin-top: 2%;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.card-product-img{
+    padding-top: 5%;
+}
+
+.card-product-text{
+    padding-top: 5%;
+}
