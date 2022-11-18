@@ -10,3 +10,14 @@
 .card-product-text{
     padding-top: 5%;
 }
+.page-link{
+    color: rgba(var(--bs-secondary-rgb),var(--bs-border-opacity))!important;
+}
+
+.pagination{
+    --bs-pagination-hover-bg: #9ca4aa;
+    --bs-pagination-active-color: #fff;
+    --bs-pagination-active-bg: #6c757d;
+    --bs-pagination-active-border-color: #6c757d;
+    color: #fff;
+}
