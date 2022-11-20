@@ -1,0 +1,1 @@
+document.querySelector('[data-action="add-in-cart"]');

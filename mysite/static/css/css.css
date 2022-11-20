@@ -21,3 +21,17 @@
     --bs-pagination-active-border-color: #6c757d;
     color: #fff;
 }
+
+.cart-container{
+    position: relative;
+}
+
+.cart{
+    background-color: #f8f9fa;
+    border: 1px solid lightgrey;
+    width: 300px;
+    height: 100px;
+    left: 15px;
+    position: absolute;
+    visibility: hidden;
+}

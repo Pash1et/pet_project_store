@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ products.name }}{% endblock %}
+
+{% block content %}
+    <img src="/{{ products.images.get.image }}">
+    {{ products.name }}<p>
+    {{ products.price }}<p>
+    {{ products.description }}
+{% endblock %}
