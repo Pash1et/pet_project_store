@@ -3,8 +3,20 @@
 {% block title %}{{ products.name }}{% endblock %}
 
 {% block content %}
-    <img src="/{{ products.images.get.image }}">
-    {{ products.name }}<p>
-    {{ products.price }}<p>
-    {{ products.description }}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 img-card-product-detail">
+                <img src="/{{ products.images.get.image }}">
+            </div>
+            <div class="col-lg-7 text-card-product-detail">
+                <h2>{{ products.name }}</h2><p>
+                    <div class="text-card-product-detail-down">
+                        <h4>{{ products.price }} ₽</h4><hr>
+                            <i>{{ products.description }}</i><p>
+                            <button class="btn btn-outline-secondary btn-product-detail">Добавить в корзину</button>
+                    </div>
+            </div>
+            
+        </div>
+    </div>
 {% endblock %}
