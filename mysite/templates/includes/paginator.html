@@ -2,7 +2,7 @@
 <nav aria-label="Page navigation" class="my-5">
   <ul class="pagination pagination-sm justify-content-center">
     {% if products.has_previous %}
-      <li class="page-item"><a class="page-link border-secondary" href="?page=1">&lsaquo;&lsaquo;</a></li>
+      <li class="page-item"><a class="page-link border-secondary" href="?page=1">&laquo;</a></li>
       <li class="page-item">
         <a class="page-link border-secondary" href="?page={{ products.previous_page_number }}">
           &lsaquo;
@@ -28,7 +28,7 @@
       </li>
       <li class="page-item">
         <a class="page-link border-secondary" href="?page={{ products.paginator.num_pages }}">
-          &rsaquo;&rsaquo;
+          &raquo;
         </a>
       </li>
     {% endif %}    

@@ -27,11 +27,11 @@
 }
 
 .cart{
+    position: absolute;
     background-color: #f8f9fa;
     width: 300px;
     height: 100px;
     left: 15px;
-    position: absolute;
     visibility: hidden;
 }
 
@@ -49,11 +49,38 @@
 
 .text-card-product-detail-down{
     position: absolute;
-    background-color: #f8f9fa;
+    background-color: #f1f1f6;
     padding: 20px;
-    
+    border-radius: 5px;
 }
 
 .btn-product-detail{
     margin-top: 20px;
 }
+
+.counter-wrapper {
+	display: flex;
+    align-items: center;
+}
+
+.count_control_minus{
+    width: 25px;
+    background-color: white;
+    text-align: center;
+    border-radius: 8px 0 0 8px;
+}
+
+.count_control_plus{
+    width: 25px;
+    background-color: white;
+    text-align: center;
+    border-radius: 0 8px 8px 0;
+    margin-right: 10px;
+}
+
+.count{
+    width: 25px;
+    background-color: white;
+    text-align: center;
+}
+

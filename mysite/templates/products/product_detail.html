@@ -12,8 +12,13 @@
                 <h2>{{ products.name }}</h2><p>
                     <div class="text-card-product-detail-down">
                         <h4>{{ products.price }} ₽</h4><hr>
-                            <i>{{ products.description }}</i><p>
-                            <button class="btn btn-outline-secondary btn-product-detail">Добавить в корзину</button>
+                        {{ products.description }}<p>
+                        <div class="counter-wrapper">
+                            <div class="count_control_minus" data-action="minus">-</div>
+                            <div class="count" data-counter>1</div>
+                            <div class="count_control_plus" data-action="plus">+</div> шт.
+                        </div>
+                        <button class="btn btn-outline-secondary btn-product-detail">Добавить в корзину</button>
                     </div>
             </div>
             
