@@ -3,25 +3,39 @@
 {% block title %}{{ products.name }}{% endblock %}
 
 {% block content %}
-    <div class="container">
+    <div class="container product-detail">
         <div class="row">
             <div class="col-lg-5 img-card-product-detail">
                 <img src="/{{ products.images.get.image }}">
             </div>
             <div class="col-lg-7 text-card-product-detail">
                 <h2>{{ products.name }}</h2><p>
-                    <div class="text-card-product-detail-down">
-                        <h4>{{ products.price }} ₽</h4><hr>
-                        {{ products.description }}<p>
-                        <div class="counter-wrapper">
-                            <div class="count_control_minus" data-action="minus">-</div>
-                            <div class="count" data-counter>1</div>
-                            <div class="count_control_plus" data-action="plus">+</div> шт.
-                        </div>
-                        <button class="btn btn-outline-secondary btn-product-detail">Добавить в корзину</button>
+                <div class="text-card-product-detail-down">
+                    <div class="top-price">
+                        <div class="price"><h4>{{ products.price }} ₽</h4></div>
+                        <div class="vendor-code">Артикул: {{ products.articul }}</div>
+                    </div><hr>
+                    {{ products.description }}<p>
+                    <div class="counter-wrapper">
+                        <div class="count_control_minus" data-action="minus">-</div>
+                        <div class="count" data-counter>1</div>
+                        <div class="count_control_plus" data-action="plus">+</div>
                     </div>
+                    <button class="btn btn-outline-secondary btn-product-detail">Добавить в корзину</button>
+                </div>
             </div>
-            
+            {% if recently_viewed %}
+                <hr>
+                <h2>Недавно просмотренные</h2>
+                {% for product in recently_viewed %}
+                    <div class="col-lg-3 text-center">
+                        <a href="/products/{{ product.articul }}/">
+                            <img src="/{{product.images.get.image}}" alt="" style="width: 250px; heigth: 250px;">
+                        </a>
+                        <p style="padding-top: 5%; text-align: center;">{{ product.name }}</p>
+                    </div>
+                {% endfor %}
+            {% endif %}
         </div>
     </div>
 {% endblock %}
