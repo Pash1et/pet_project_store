@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Корзина{% endblock %}
+
+
+
+{% block content %}
+    <div class="container cart-container">
+        <h1>Корзина</h1><hr>
+        <div class="cart-wrapper">
+            <div class="order-cart">
+                <div class="product-add-cart" style="position: relative; padding: 40px; height: 180px;">
+                    Корзина пуста :(
+                </div>
+            </div>
+            <div class="sticky-cart">
+                <h4>Сумма заказа</h4>
+
+                <h2>30 000</h2>
+                <div class="btn-cart-confirm" style="top:140px; position:relative;">
+                    <button type="button" class="btn btn-outline-secondary" style="">Оформить заказ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
