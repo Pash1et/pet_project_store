@@ -28,7 +28,7 @@ class ProductInOrder(models.Model):
     product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True)
     price = models.DecimalField(default=0, max_digits=10, decimal_places=0,
                                 verbose_name='Цена за единицу')
-    count = models.IntegerField(default=1, verbose_name='Кол-во')
+    count = models.PositiveIntegerField(default=1, verbose_name='Кол-во')
     total_price = models.DecimalField(max_digits=10, decimal_places=0,
                                       default=0, verbose_name='Общая цена')
 
@@ -38,6 +38,7 @@ class ProductInOrder(models.Model):
     def save(self, *args, **kwargs):
         self.price = self.product.price
         self.total_price = self.price * self.count
+        # Product.objects.filter(articul=self.product.articul).update(count=self.product.count - self.count)
         super().save(*args, **kwargs)
 
     class Meta:
