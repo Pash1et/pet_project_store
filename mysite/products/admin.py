@@ -10,7 +10,7 @@ class ProductImageInline(admin.TabularInline):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('name', 'price', 'is_active', 'articul', 'image')
+    list_display = ('name', 'price', 'count', 'is_active', 'articul', 'image')
     empty_value_display = '-empty-'
     inlines = [ProductImageInline]
 

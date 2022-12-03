@@ -8,9 +8,9 @@ class Product(models.Model):
                                 decimal_places=0,
                                 verbose_name='Цена, ₽')
     articul = models.IntegerField(verbose_name='Артикул')
+    count = models.IntegerField(verbose_name='Количество')
     is_active = models.BooleanField(default=False,
                                     verbose_name='Показать на сайте?')
-    delete = models.BooleanField(default=False, verbose_name='Удалить?')
     created = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 

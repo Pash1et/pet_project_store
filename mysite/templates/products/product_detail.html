@@ -20,8 +20,17 @@
                         <div class="count_control_minus" data-action="minus">-</div>
                         <div class="count" data-counter>1</div>
                         <div class="count_control_plus" data-action="plus">+</div>
+                        {% if products.count == 0 %}
+                            <div style="color: red;">Нет в наличии</div>
+                        {% else %}
+                            <div>В наличии: {{ products.count }}</div>
+                        {% endif %}
                     </div>
-                    <button class="btn btn-outline-secondary btn-product-detail">Добавить в корзину</button>
+                    {% if products.count == 0 %}
+                        <button class="btn btn-outline-secondary btn-product-detail disabled">Добавить в корзину</button>
+                    {% else %}
+                        <button class="btn btn-outline-secondary btn-product-detail">Добавить в корзину</button>
+                    {% endif %}
                 </div>
             </div>
             {% if recently_viewed %}
